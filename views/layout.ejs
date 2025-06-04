@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/layout.css">
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- shared-navbar -->
+     <nav class ="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/" >KX Blogging</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcol">            
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse" id="navcol">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Author</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#">Reader</a>
+                </li>
+            </ul>
+        </div>    
+     </nav>
+
+     
+    <!-- Page-specific content -->
+    <main class="container mt-4">
+        <%- body %>
+    </main>
+
+     <!-- Shared Footer -->
+    <footer class="bg-light text-center text-muted py-3 mt-4">
+        &copy; 2025 KXBlogging. All rights reserved.
+    </footer>
+</body>
+</html>

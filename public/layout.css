@@ -1,0 +1,46 @@
+:root {
+  /* Primary Brand Colors */
+  --color-primary-blue: #667eea;      /* Soft Periwinkle Blue */
+  --color-primary-purple: #764ba2;    /* Medium Purple */
+
+  /* Main Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+
+  /* Background Colors */
+  --bg-hero: var(--gradient-primary);
+  --bg-light: #f8fafc;                /* For Brand Story section */
+  --bg-dark: var(--gradient-dark);    /* For Values section */
+  --bg-card: #ffffff;
+  --bg-card-dark: rgba(255, 255, 255, 0.05); /* Value cards */
+  --bg-hover: rgba(255, 255, 255, 0.1);
+
+  /* Text Colors */
+  --text-dark: #1a1a1a;               /* Main text */
+  --text-medium: #666666;             /* Secondary text */
+  --text-light: #333333;              /* Nav links */
+  --text-white: #ffffff;
+
+  /* Navigation */
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-hover: #667eea;
+  --logo-color: #667eea;
+
+  /* Border */
+  --border-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Shadows */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  --shadow-deep: rgba(0, 0, 0, 0.3);
+
+  /* Buttons */
+  --btn-cta-bg: #ffffff;
+  --btn-cta-text: #667eea;
+}
+
+
+.navbar-brand {
+  margin-left: 3%;
+}
