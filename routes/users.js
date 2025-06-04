@@ -30,9 +30,7 @@ router.get("/list-users", (req, res, next) => {
     );
 });
 
-router.get("/home", (req, res) => {
-    res.render("home.ejs");
-});
+
 
 /**
  * @desc Displays a page with a form for creating a user record
@@ -61,8 +59,6 @@ router.post("/add-user", (req, res, next) => {
         }
     );
 });
-
-
 
 // Export the router object so index.js can access it
 module.exports = router;

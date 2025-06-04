@@ -10,6 +10,8 @@ const port = 3000;
 var bodyParser = require("body-parser");
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
+const session = require('express-session');
+
 
 //setup bootstrap
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
@@ -33,15 +35,27 @@ global.db = new sqlite3.Database('./database.db',function(err){
     }
 });
 
+app.use(session({
+    secret: 'SeCreTKey010298',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
+
 // Handle requests to the home page 
 app.get('/', (req, res) => {
     res.render('home.ejs', { title: 'Home' });
 });
 
-// Add all the route handlers in usersRoutes to the app under the path /users
+// Add all the route handlers in usersRoutes to the app under the path /
 const usersRoutes = require('./routes/users');
-app.use('/users', usersRoutes);
+app.use('/', usersRoutes);
 
+const authRoutes = require('./routes/auth_route');
+app.use('/auth', authRoutes);
+
+const organizerRoutes = require('./routes/organizer_route');
+app.use('/organizer', organizerRoutes);
 
 // Make the web application listen for HTTP requests
 app.listen(port, () => {
