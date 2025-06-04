@@ -40,7 +40,16 @@
   --btn-cta-text: #667eea;
 }
 
-
 .navbar-brand {
   margin-left: 3%;
+  color: var(--logo-color);
+}
+
+.navbar-nav .nav-link {
+    color: #64748b; /* Slate gray - more modern */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #667eea;
+    font-weight: 600; /* Add weight on hover */
 }

@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS organizers(
     email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     site_name TEXT DEFAULT 'My Event Site',
-    site_description TEXT DEFAULT 'Welcome to my event site',
-)
+    site_description TEXT DEFAULT 'Welcome to my event site'
+);
 
 --events table
 CREATE TABLE IF NOT EXISTS events(
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS tickets(
 INSERT INTO organizers (name, email, password, site_name, site_description) VALUES
 ('Simon Star', 'simon@example.com', 'hashedpassword1', 'Simon Events', 'Awesome yoga events'),
 ('Dianne Dean', 'dianne@example.com', 'hashedpassword2', 'Dianne Yoga', 'Yoga classes for all ages'),
-('Harry Hilbert', 'harry@example.com', 'hashedpassword3', 'Harry\'s Events', 'Fun and engaging events');
+('Harry Hilbert', 'harry@example.com', 'hashedpassword3', 'Harry''s Events', 'Fun and engaging events');
 
 COMMIT;
 
